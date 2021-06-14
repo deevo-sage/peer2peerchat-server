@@ -1,0 +1,14 @@
+type Query {
+  active: String
+}
+input MessageInput {
+  data: String
+  roomID: String
+  username: String
+}
+type Mutation {
+  message(input: MessageInput): Message
+}
+type Subscription {
+  message(roomID:String): Message
+}
